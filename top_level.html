@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+var taskValid=["login","quit","createUser","change_pwd"];
+var taskInput=prompt("Enter Task");
+var taskChecker=false;
+var users=["fawad","ali","shan","noman"];
+var passcode_valid=["12","23","34","45","56"];
+
+if(taskValid[0]==taskInput){
+let login=prompt("Please input user id");
+let Passcode=prompt("Please input password");
+
+
+let check_valid=false;
+for(n=0;n<users.length;n++){
+    if(users[n]==login && passcode_valid[n]==Passcode){
+        check_valid=true;
+        console.log("You are welcome "+users[n]);
+        alert("You are welcome "+users[n]);
+    }
+}
+if(check_valid===false){
+    console.log("Incorrect password entered ");
+        alert("Incorrect password entered ");   
+}
+}
+if(taskValid[1]==taskInput){
+    console.log("you exit to the programe")
+}
+if(taskValid[2]==taskInput){
+    var newUser=prompt("Please input new user name");
+    var newPasscode=prompt("Please input new user passcode");
+
+    if(newUser!=="" && newPasscode!==""){
+      users.push(newUser);
+      passcode_valid.push(newPasscode);
+      alert("New user sucessfully Created");
+    }
+   else{
+    alert("Please fillout all feilds");
+   }
+}
+if(taskValid[3]==taskInput){
+    var checkUser=prompt("Please select user");
+    var userChecker=false;
+    for(let a=0;a<users.length;a++){
+        if(checkUser==users[a]){
+            userChecker=true;
+            var oldPwd=prompt("input old password");
+                for(let b=0;b<passcode_valid.length;b++){
+                    if(passcode_valid[b]==oldPwd){
+                        var newPwd=prompt("Please input new password");
+                            if(newPwd!==""){
+                                passcode_valid.splice(b,1,newPwd);
+                                document.write(users[b]+" "+passcode_valid[b])
+
+                                console.log("Password changed sucessfully")
+                                }
+                                else{
+                                    console.log("Password does not match to old password")
+                                }
+                    }
+                }
+    }
+}}
+
+</script>
+</html>

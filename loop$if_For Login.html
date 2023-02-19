@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var task_valid=["login","create new","change password","quit"];
+    var task=prompt("Enter Your Task");
+    var task_checker=false;
+
+    var user=["jawad","ali","saqib","naeem"];
+    var user_pass=["12","34","56","78"];
+
+    if(task_valid[0]==task){
+        let user_name=prompt("Enter User Name");
+        let user_psw=prompt("Enter your password");
+        
+        let user_check=false;
+        for(n=0;n<user.length;n++){
+            if(user[n]==user_name && user_pass[n]==user_psw){
+            user_check=true;
+            alert("welcom to "+" "+user[n]);
+        }
+        }
+        if(user_check===false){
+            alert("invalid User or password")
+        }
+
+    }
+    if(task==task_valid[1]){
+        var newUser=prompt("Input New User Name");
+        var newPwd=prompt("Input Password");
+        if(newUser!=="" && newPwd!==""){
+        for(a=0;a<user.length;a++){
+            if(user[a]!==newUser){
+                user.push(newUser)
+                user_pass.push(newPwd)
+                console.log(user)
+                break;
+            }
+            else{
+                console.log("This user is already exist")
+            }
+        }
+    }
+    }
+    if(task==task_valid[2]){
+        var check_user=prompt("Enter User Name");
+        let verified_user=false;
+        for(let b=0;b<=user.length;b++){
+            if(check_user==user[b]){
+                verified_user=true;
+                var old_psw=prompt("Enter Old Password");
+                    for(c=0;c<=user_pass.length;c++){
+                        if(old_psw==user_pass[c]){
+                            var new_psw=prompt("Enter new Password");
+                            if(new_psw!==""){
+                                user_pass.splice(c,1,newPwd);
+                                alert(user[c]+"Your password changed succesfully");
+                            }
+                            else{"User name incorrect"};
+                        }
+                    
+                    }
+                }
+            }
+        }
+    
+        if(task==task_valid[3]){
+            alert("you are Quite")
+        }
+        if(task!==task_valid[0,1,2,3]){
+            alert("please Enter Correct Task");
+        }
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="find">
+    <input type="text" id="replace">
+    <input type="button" value="Find & Replace" onclick="findreplace();">
+    <p id="para">My name Is jawad He said fawad. My name Is jawad He said My name Is jawad He said fawad. My name Is jawad He said fawad. My name Is jawad He said fawad. My name Is jawad He said fawad. My name Is jawad He said fawad. My name Is jawad He said fawad. My name Is jawad He said fawad. My name Is jawad He said fawad. My name Is jawad He said fawad. My name Is jawad He said fawad.  name Is jawad He said fawad. fawad. My name Is jawad He said fawad.  </p>
+</body>
+<script>
+    function findreplace(){
+        var text = document.getElementById("para").textContent;
+        var Find = document.getElementById("find").value;
+        var replace = document.getElementById("replace").value;
+        console.log(text);
+        for(let i=0;i<text.length;i++){
+            if (text.slice(i,i+Find.length)===Find){
+                text=text.slice(0,i)+replace+text.slice(i + Find.length);
+            }
+        }
+        document.getElementById("para").textContent=text;
+    }
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="first">
+    <input type="number" id="second">
+    <input type="number" id="result">
+    <input type="button" id="btn" onclick="get();" value="print">
+</body>
+<script>
+    function get(){
+        var firstv=document.getElementById("first").value;
+        console.log(firstv);
+        var secondv=document.getElementById("second").value;
+        var btnv=(firstv*secondv);
+        document.getElementById("result").value =btnv;
+    }
+    
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="Start">
+    <input type="number" id="End">
+    <input type="button" id="printbtn" value="Print" onclick="Print()">
+    <p id="result"></p>
+</body>
+<script>
+    function Print(){
+        var sn=document.getElementById("Start").value;
+        var en=document.getElementById("End").value;
+        var Result="";
+     for(let i=sn;i<=en;i++){
+        for(n=1;n<=10;n++){
+            Result+=i + "x"+ n+"="+i*n+"</br>";
+        }
+        
+    }
+    document.getElementById("result").innerHTML=Result;
+    }
+    
+</script>
+</html>

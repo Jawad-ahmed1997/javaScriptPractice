@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="find">
+    <input type="text" id="replace">
+    <input type="button" id="result" value="Replace" onclick="findreplace();">
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quas facilis inventore perspiciatis modi! Magni ea suscipit quisquam quo quae!</p>
+</body>
+<script>
+    function findreplace(){
+        var text=document.getElementById("para").textContent;
+        var find=document.getElementById("find").value;
+        var replace=document.getElementById("replace").value;
+        console.log(text);
+        console.log(replace);
+        for(let i=0;i<text.length;i++){
+            if(text.slice(i,i+find.length)===find){
+               text=text.slice(0,i)+replace+text.slice(i+find.length);
+            }
+        }
+        document.getElementById("para").textContent=text;
+    }
+</script>
+</html>

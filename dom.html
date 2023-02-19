@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form>
+        <input type="range" id="c" min="1" max="100" onchange="num();">
+        <input type="number" id="unitprice"/>
+    </form> -->
+    <form>
+        <input type="range" min="1" max="1000" id="c" onchange="num();">
+        <input type="number" id="get">
+    </form>
+</body>
+<script>
+    // function num(){
+    //     var given=document.getElementById("c").value;
+    //     document.getElementById("unitprice").value=given;
+    // }
+    function num(){
+        var given=document.getElementById("c").value;
+        document.getElementById("get").value= given;
+    }
+</script>
+</html>

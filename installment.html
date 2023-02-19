@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="unitprice" placeholder="Enter unit price">
+    <input type="number" id="Qty" placeholder="Enter qty">
+    <input type="number" id="calc" placeholder="Your total Amount">
+    <input type="button" value="Calcultat gross amount" onclick="ta();">
+    <input type="number" id="noi" placeholder="Enter # Of Installments">
+    <input type="number" id="currentamount" placeholder="Your Current Amount">
+    <input type="button" value="Payment" onclick="final();">
+</body>
+<script>
+function ta(){
+    var cal1=document.getElementById("unitprice").value;
+    var cal2=document.getElementById("Qty").value;
+    var calc=(cal2*cal1);
+    document.getElementById("calc").value=calc;  
+}
+function final(){
+    var again=document.getElementById("calc").value;
+    var noi=document.getElementById("noi").value;
+    var fa=(again/noi);
+    var fanew=fa.toFixed(3);
+    document.getElementById("currentamount").value =fanew;
+    alert("Your current payment is " + fa + " with " + noi + " Installments")
+}
+    
+</script
+</html>

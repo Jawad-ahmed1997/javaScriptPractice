@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="reform()">Update Para</button>
+    <P id="para">lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ex voluptatum architecto debitis, praesentium ipsa, aut aperiam qui officia, veritatis quia voluptates? Provident eos illo fugiat? Adipisci unde voluptates odit.
+    </P>
+</body>
+<script>
+    function reform(){
+        var textpara=document.getElementById("para").textContent;
+        var firstcharacter=textpara.slice(0,5);
+        var others=textpara.slice(7);
+        firstcharacter=firstcharacter.toUpperCase();
+        others=others.toLowerCase();
+        var reform=firstcharacter+others;
+        document.getElementById("para").innerHTML=reform;
+    }
+</script>
+</html>

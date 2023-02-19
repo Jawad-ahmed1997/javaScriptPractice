@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        time assiment
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+     window.setTimeout(function () {
+    var currenttime= new Date().getHours();
+    var currenttime1= new Date().getMinutes();
+
+    console.log(currenttime);
+    if(currenttime<5){
+        alert("good Night it's " + currenttime + ":" + currenttime1);
+    }
+    else if(currenttime<12){
+        alert("good Morning it's " + currenttime + ":" + currenttime1);
+    }
+    else if(currenttime<19){
+        alert("good evening it's " + currenttime + ":" + currenttime1);
+    }
+    else{
+        alert("Mid Night it's " + currenttime + ":" + currenttime1);
+    }
+   
+  window.location.reload();
+}, 3000);
+</script>
+</html>

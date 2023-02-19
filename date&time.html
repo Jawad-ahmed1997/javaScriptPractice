@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var month=["Jan","feb","Mar","Apr","May","june","jully","aug","sep","oct","Nov","dec"]
+    var days=["sun","mon","tues","wed","thur","friday","sat"];
+    // var today= new Date();
+    // var cday = today.getDay();
+    // var cmon = today.getMonth();
+    // var cdate = today.getDate();
+    // var chrs = today.getHours();
+    // var cmin = today.getMinutes();
+    // var cmili = today.getMilliseconds();
+    // var cyear = today.getFullYear();
+    // var ctime = today.getTime();
+    // console.log(today);
+    // console.log(days[cday]);
+    // console.log(month[cmon]);
+    // console.log(cdate);
+    // console.log(chrs);
+    // console.log(cmin);
+    // console.log(cmili);
+    // console.log(cyear);
+    // console.log(ct);
+    var today = new Date();
+    var year = today.getFullYear();
+    var months=today.getMonth();
+    var day = today.getDay();
+    console.log(days[day]+" "+month[months]+" "+year);
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const Prices=[1000,-1001,2000,-1001,3000,-2001,4000,5000]
+    // let negetive=Prices.filter((checkNegative)=>{
+    //     return checkNegative<0;
+    // });
+    let negetive=Prices.filter((checknegative)=>(checknegative<0))
+    let Positive=Prices.filter((checkPositive)=>(checkPositive>0))
+    // let Positive=Prices.filter((checkPositive)=>{
+    //     return checkPositive>0;
+    // });
+    let Positivevalues=Positive.reduce((v,n)=>(v+=n));
+    let NegetiveValues=Positive.reduce((v,n)=>(v+=n));
+    let balance = Positivevalues+NegetiveValues
+    console.log(negetive)
+    console.log(Positive)
+    console.log(Positivevalues)
+    console.log(NegetiveValues)
+    console.log(balance)
+
+</script>
+</html>

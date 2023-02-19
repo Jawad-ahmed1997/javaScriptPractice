@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="find">
+    <input type="button" onclick="tryttt();" value="find what">
+    <p id="para">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere quidem placeat rerum recusandae, voluptate eos possimus deleniti inventore praesentium, nihil impedit quos consectetur culpa. Odio odit exercitationem repudiandae harum, illo placeat maiores veritatis voluptatum iste architecto. Ullam corporis recusandae ducimus. Laboriosam eius nesciunt dolorem quidem quas, asperiores officia, fuga adipisci aliquam totam deserunt aut inventore repudiandae? Voluptatibus modi dicta doloremque, dolores quo molestias blanditiis ipsam sunt pariatur labore tempora vitae! Inventore sit dicta illum? Quos ipsum ea, reiciendis quisquam eum similique nulla assumenda voluptatum alias aperiam odio eius ad nesciunt, eaque temporibus. Maxime nam perspiciatis atque praesentium, distinctio eaque expedita.
+    </p>
+</body>
+<script>
+    function tryttt(){
+        var text = document.getElementById("para").textContent;
+        var findfound=false;
+        for(let i=0;i<text.length;i++){
+        var findvalue=document.getElementById("find").value;
+       
+
+            if(text.slice(i,i+findvalue.length)===findvalue){
+                findfound=true;
+                console.log(findvalue);
+                alert("congratulation we found " + findvalue);
+                break;
+            }
+            // else if(findfound===false){
+            //    alert("we can Not find "+ findvalue);
+            //     break;
+            //  }
+        }
+    }
+   
+
+</script>
+</html>

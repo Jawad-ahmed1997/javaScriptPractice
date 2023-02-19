@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="range" id="Number" min="1" max="100" onchange="GetNumber();">
+    <input type="number" id="Num"/>
+</body>
+<script>
+function GetNumber(){
+    var given=document.getElementById("Number").value;
+    document.getElementById("Num").value=given;
+}
+</script>
+</html>

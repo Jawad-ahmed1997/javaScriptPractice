@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="find">
+    <input type="button" value="Find What" onclick="findgiven();" ></br></br>
+    <input type="text" id="replace">
+    <input type="button" value="Replace with" onclick="replacegiven();">
+    <p id="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quas iure iusto, in consequatur tenetur necessitatibus accusamus assumenda excepturi, blanditiis officia, harum exercitationem praesentium recusandae? Dolore sint impedit fugiat culpa.
+    </p>
+</body>
+<script>
+    function findgiven(){
+        var text = document.getElementById("para").textContent;
+        var Findinput = document.getElementById("find").value;
+        var Replacevalue =document.getElementById("replace").value;
+        var findresult=false;
+        for(let i=0;i<text.length;i++){
+            if (text.slice(i,i+Findinput.length)===Findinput){
+                findresult=true;
+                 alert("Congratulation we find "+ Findinput);
+            }
+            if(findresult===false){
+                alert("get error " + Findinput);
+            }
+            break;
+        }
+            }
+</script>
+</html>

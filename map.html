@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <P id=took></P>
+</body>
+<script>
+    var mydata=[
+        {Price:1000 , Product :"Laptop"},
+        {Price:2000 , Product :"Laptop"},
+        {Price:3000 , Product:"Laptop"},
+        {Price:4000 , Product:"Laptop"},
+        {Price:5000 , Product:"Laptop"},
+        {Price:6000 , Product:"Laptop"},
+        {Price:7000 , Product:"Laptop"},
+        {Price:8000 , Product:"Laptop"},
+        {Price:9000 , Product:"Laptop"},
+        {Price:10000 , Product:"Laptop"},
+        {Price:11000 , Product:"Laptop"},
+    ];
+    const newData = mydata.map((v,i)=>{
+        return i+" "+v.Product+" " +v.Price ;
+    })
+document.getElementById("took").innerHTML=newData;
+</script>
+</html>
