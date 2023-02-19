@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #background{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .calc{
+        margin-top: 10px;
+        background-color: rgb(35, 158, 235);
+        height: 380px;
+        width:280px;
+ }
+ .calc_num{
+     height: 65px;
+     width: 65px;
+     font-size: larger;
+ }
+ .display{
+     height: 100px;
+     width: 270px;
+ }
+ </style>
+<body>
+    <div id="background">
+    <div class="calc">
+    <input type="text" id="main_display" class="display">
+    <input type="button" value="7" id="7" class="calc_num" onclick="getnum(this.value);">
+    <input type="button" value="8" id="8" class="calc_num" onclick="getnum();">
+    <input type="button" value="9" id="9" class="calc_num" onclick="getnum();">
+    <input type="button" value="X" id="multiply" class="calc_num" onclick="getnum();">
+    <input type="button" value="4" id="4" class="calc_num" onclick="getnum();">
+    <input type="button" value="5" id="5" class="calc_num" onclick="getnum();">
+    <input type="button" value="6" id="6" class="calc_num" onclick="getnum();">
+    <input type="button" value="/" id="divide" class="calc_num" onclick="getnum();">
+    <input type="button" value="1" id="1" class="calc_num" onclick="getnum();">
+    <input type="button" value="2" id="2" class="calc_num" onclick="getnum();">    
+    <input type="button" value="3" id="3" class="calc_num" onclick="getnum();">
+    <input type="button" value="-" id="subtract" class="calc_num" onclick="getnum();">
+    <input type="button" value="0" id="0" class="calc_num" onclick="getnum();">
+    <input type="button" value="." id="point" class="calc_num" onclick="getnum();">
+    <input type="button" value="+" id="Add" class="calc_num" onclick="getnum();">
+    <input type="button" value="=" id="Equal" class="calc_num"  onclick="getnum();">
+    </div>
+    </div>
+</body>
+<script>
+    
+    const getnum=(e)=>{
+        var clickvalu = e;
+       
+    }
+</script>
+</html>
