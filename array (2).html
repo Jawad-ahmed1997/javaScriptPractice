@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var mycity=prompt("Enter Your City");
+    var cities=["KHI","HYD","LHR","ISL","PSH","FSL"];
+    var matchfound = false;
+    var i;
+    for(i=0;i<cities.length;i++){
+        if(mycity===cities[i]){
+            matchfound= true;
+           alert("congratulation You Are from Elegible Citi");
+           break;
+        }
+    }
+        if(matchfound===false){
+            alert("sorry you are not elegible");
+        }
+</script>
+</html>

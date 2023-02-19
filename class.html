@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class palnes{
+        constructor(monthly_price,space,pages){
+            this.monthly_price=monthly_price
+            this.space=space
+            this.pages=pages
+        }
+        getdetails(){
+            console.log (`The details are Price: ${this.monthly_price} Pages: ${this.pages} Space: ${this.space}.`)
+        }
+    }
+    plain1 = new palnes(1000,"100 GB",10)
+    plain2 = new palnes(2000,"200 GB",10)
+    plain3 = new palnes(3000,"300 GB",10)
+    plain1.getdetails()
+    plain2.getdetails()
+    plain3.getdetails()
+    
+
+
+</script>
+</html>

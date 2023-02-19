@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">
+
+    </p>
+</body>
+<script>
+    // // var x = myfunction(9,3)*2;
+    
+    // // function myfunction(a,b,c,d,){
+    // //     return arguments.length
+    // // }
+    // const myfunction=(x,y)=> x*y
+    // document.getElementById("demo").innerHTML = myfunction(3,2);
+    // // var myfunction = new Function("a" , "b", "return a*b");
+    // // document.getElementById("demo").innerHTML = myfunction(2,4)
+    myobject = {
+        firstName:"jawad",
+        lastname:"ahmed",
+        fullname:function(){
+            return this;
+        }
+    }
+    document.getElementById("demo").innerHTML = myobject.fullname();
+</script>
+</html>

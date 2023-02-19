@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .mystyle{
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+    }
+</style>
+<body>
+    
+    <button onclick="myfunction();">Click Me</button>
+    <input type="text" id="demo">
+    <p id="demo1">Will Recived Buttons</p>
+</body>
+<script>
+    
+    function myfunction() {
+        var btn = document.createElement("button");
+        btn.innerHTML="Click Me"
+        btn.className="mystyle"
+        document.getElementById("demo1").appendChild(btn);  
+    }
+
+</script>
+</html>

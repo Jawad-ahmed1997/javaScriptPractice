@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+    var plain1={Monthly:100,data:500,pages:10,discountMonth:[1,2,3]};
+    function annualcal (percentifdiscount){
+        var bestprice=plain1.Monthly
+        var currentdate=new Date();
+        var thismonth = currentdate.getMonth();
+        for(i of plain1.discountMonth){
+            if(i===thismonth){
+                bestprice=plain1.Monthly*percentifdiscount
+                break;
+            }
+        }
+        return bestprice*12
+    }
+    console.log(annualcal(0.9));
+    
+</script>   
+</body>
+
+</html>
